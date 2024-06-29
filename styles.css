@@ -1,0 +1,159 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(https://img.freepik.com/premium-vector/beautiful-meadow-with-stone-green-grass-trees-mountain-blue-sky_288411-1676.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.bird,
+.butterfly {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.bird {
+  background-image: url("https://media.tenor.com/LvLDb8Xj234AAAAj/goodbye-darling.gif");
+  animation: fly 15s linear infinite;
+}
+
+.bird1 {
+  background-image: url("https://media.tenor.com/zA-H27KaTUwAAAAj/butterfly-red-butterfly.gif");
+  top: 20%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.bird2 {
+  top: 40%;
+  left: -10%;
+  animation-delay: 7.5s;
+}
+
+.butterfly {
+  background-image: url("/image/output-onlinegiftools.gif");
+  animation: flutter 10s linear infinite;
+}
+
+.butterfly1 {
+  top: 60%;
+  left: -10%;
+  animation-delay: 5s;
+}
+
+.butterfly2 {
+  top: 80%;
+  left: -10%;
+  animation-delay: 10s;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translateX(25vw) translateY(-10vh) scale(1.2) rotate(10deg);
+  }
+  50% {
+    transform: translateX(50vw) translateY(-20vh) scale(1) rotate(-10deg);
+  }
+  75% {
+    transform: translateX(75vw) translateY(-10vh) scale(1.2) rotate(10deg);
+  }
+  100% {
+    transform: translateX(100vw) translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes flutter {
+  0% {
+    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translateX(25vw) translateY(5vh) scale(1.1) rotate(-10deg);
+  }
+  50% {
+    transform: translateX(50vw) translateY(10vh) scale(1) rotate(10deg);
+  }
+  75% {
+    transform: translateX(75vw) translateY(5vh) scale(1.1) rotate(-10deg);
+  }
+  100% {
+    transform: translateX(100vw) translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+.yoga-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.animation-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.yoga-character {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.yoga-character img {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  transition: left 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.yoga-character img.active {
+  left: 0;
+  opacity: 1;
+}
+
+.yoga-character img.previous {
+  left: -100%;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
